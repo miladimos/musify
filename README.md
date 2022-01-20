@@ -4,16 +4,16 @@ A opensource, minimal and powerful audio player for android.
 
 
 ##### Features
-[] - dark mode
-[] - multiple template
-[] - multiple language
-[] - custom play lists
-[] - sleep timer
-[] - change music with shaking mobile (sensors)
-[] - change music with low,high btn
-[] - android widget
-[] - change background image
-[] - control musics in notification bar
+- [] dark mode
+- [] multiple template
+- [] multiple language
+- [] custom play lists
+- [] sleep timer
+- [] change music with shaking mobile (sensors)
+- [] change music with low,high btn
+- [] android widget
+- [] change background image
+- [] control musics in notification bar
 
 
 
