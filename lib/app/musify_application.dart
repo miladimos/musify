@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musify/app/constants.dart';
+import 'package:musify/app/pages/home_page.dart';
 
 class MusifyApplication extends StatefulWidget {
   const MusifyApplication({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _MusifyApplicationState extends State<MusifyApplication> {
           primaryIconTheme: IconThemeData(color: Colors.black),
           primaryTextTheme: TextTheme(headline6: TextStyle(color: Colors.black))
       ),
-      home: Text('Musify'),
+      home: const HomePage(),
     );
   }
 }
