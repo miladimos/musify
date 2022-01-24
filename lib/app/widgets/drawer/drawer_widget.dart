@@ -18,6 +18,31 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             accountEmail: Text('mobile'),
           ),
           ListTile(
+            title: Text('Account'),
+            leading: Icon(Icons.account_circle),
+            onTap: null,
+          ),
+          ListTile(
+            title: Text('Developers'),
+            leading: Icon(Icons.code),
+            onTap: null,
+          ),
+          ListTile(
+            title: Text('Support us'),
+            leading: Icon(Icons.card_giftcard),
+            onTap: null,
+          ),
+          ListTile(
+            title: Text('About us'),
+            leading: Icon(Icons.settings),
+            onTap: null,
+          ),
+          ListTile(
+            title: Text('Contact us'),
+            leading: Icon(Icons.settings),
+            onTap: null,
+          ),
+          ListTile(
             title: Text('Settings'),
             leading: Icon(Icons.settings),
             onTap: null,
@@ -35,6 +60,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: Text('Night Mode'),
             leading: Icon(Icons.nightlight_round),
             onTap: null,
+            trailing: Switch(value: false, onChanged: null),
           ),
         ],
       ),

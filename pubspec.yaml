@@ -12,9 +12,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  intl: ^0.17.0
+#  flutter_localizations:
+#    sdk: flutter
+#  intl: ^0.17.0
   logging: ^1.0.2
   shared_preferences: ^2.0.12
   url_launcher: ^6.0.18
@@ -33,6 +33,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/

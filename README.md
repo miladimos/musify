@@ -3,6 +3,8 @@
 A opensource, minimal and powerful audio player for android.
 
 
+gramophone
+
 ##### Features
 - [] dark mode
 - [] multiple template

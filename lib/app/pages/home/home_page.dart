@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musify/app/constants.dart';
+import 'package:musify/app/app_constants.dart';
 import 'package:musify/app/widgets/drawer/drawer_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(applicationTitle),
+        title: Text(AppConstants.applicationTitle),
       ),
       body: Text('Musify'),
       drawer: const DrawerWidget(),
