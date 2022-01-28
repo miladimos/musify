@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // import 'package:flutter_localizations/flutter_localizations.dart';
 // // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -35,9 +36,11 @@ class _MusifyApplicationState extends State<MusifyApplication> {
       // supportedLocales: AppLocalizations.supportedLocales,
       // localizationsDelegates: AppLocalizations.localizationsDelegates,
       theme: ThemeData(
-          primaryIconTheme: IconThemeData(color: Colors.black),
-          primaryTextTheme:
-              TextTheme(headline6: TextStyle(color: Colors.black))),
+        primaryIconTheme: IconThemeData(color: Colors.black),
+        primaryTextTheme: TextTheme(headline6: TextStyle(color: Colors.black)),
+        primaryColor: Colors.black,
+        iconTheme: IconThemeData(color: Colors.black),
+      ),
       // initialRoute: '/splash',
       // routes: {
       //   '/': (context) => HomePage(),

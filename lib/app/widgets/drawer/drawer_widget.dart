@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:musify/app/helpers.dart';
+import 'package:musify/app/pages/settings/setting/setting_page.dart';
 
 class DrawerWidget extends StatefulWidget {
-  const DrawerWidget({Key? key}) : super(key: key);
+  const DrawerWidget({Key? key, required BuildContext context}) : super(key: key);
 
   @override
   _DrawerWidgetState createState() => _DrawerWidgetState();
 }
 
 class _DrawerWidgetState extends State<DrawerWidget> {
+
+  Future gotoPage(page) {
+    return Helpers.navigateToPage(context, page);
+  }
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(
-        children: const [
+        children:  [
           UserAccountsDrawerHeader(
             accountName: Text('username'),
             accountEmail: Text('mobile'),
@@ -45,7 +51,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           ListTile(
             title: Text('Settings'),
             leading: Icon(Icons.settings),
-            onTap: null,
+            onTap: () => gotoPage(SettingPage()),
           ),
           ListTile(
             title: Text('Help'),

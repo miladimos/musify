@@ -16,7 +16,7 @@ gramophone
 - [] android widget
 - [] change background image
 - [] control musics in notification bar
-
+- [] sync local musics with server
 
 add your idea's, features and ...
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:musify/app/pages/home/home_page.dart';
 import 'package:musify/app/pages/musics/musics.dart';
 import 'package:musify/app/pages/playlists/playlists.dart';
+import 'package:musify/app/widgets/appbar/appbar_widget.dart';
 import 'package:musify/app/widgets/bottomappbar/bottom_navigation_app_bar2.dart';
 import 'package:musify/app/widgets/drawer/drawer_widget.dart';
 
@@ -14,6 +15,7 @@ class Musify extends StatefulWidget {
 
 class _MusifyState extends State<Musify> {
   int _currentPageIndex = 0;
+
   void _onBottomNavigarionBartapped(int index) {
     setState(() {
       this._currentPageIndex = index;
@@ -27,12 +29,16 @@ class _MusifyState extends State<Musify> {
       new PlayListsPage(),
       new MusicsPage(),
     ];
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Musify"),
+      appBar: AppBarWidget(
+        title: Text(
+          "Musify",
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: pages[_currentPageIndex],
-      drawer: const DrawerWidget(),
+      drawer:  DrawerWidget(context: context,),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onBottomNavigarionBartapped,
         currentIndex: _currentPageIndex,
