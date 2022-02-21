@@ -12,16 +12,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-#  flutter_localizations:
-#    sdk: flutter
-#  intl: ^0.17.0
+  #  flutter_localizations:
+  #    sdk: flutter
+  #  intl: ^0.17.0
+  easy_localization: ^3.0.0
+  just_audio: ^0.9.18
+  path_provider: ^2.0.1
   logging: ^1.0.2
   shared_preferences: ^2.0.12
   url_launcher: ^6.0.18
+  get: ^4.6.1
   flutter_bloc: ^8.0.1
+  animations: ^2.0.2
   flutter_local_notifications: ^9.2.0
   permission_handler: ^8.3.0
-#  audioplayers: ^0.20.1
+  #  audioplayers: ^0.20.1
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -37,6 +42,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/translations/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

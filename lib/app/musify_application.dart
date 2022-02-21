@@ -1,52 +1,36 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:musify/app/app_router.dart';
+import 'package:get/get.dart';
+import 'package:musify/app/utils/app_constants.dart';
 
-// import 'package:flutter_localizations/flutter_localizations.dart';
-// // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+class MusifyApplication extends StatelessWidget {
+  final AppRouter router;
 
-import 'package:musify/app/app_constants.dart';
-import 'package:musify/app/musify.dart';
-import 'package:musify/app/pages/home/home_page.dart';
-import 'package:musify/app/pages/splash/splash_page.dart';
+  const MusifyApplication({Key? key, required this.router}) : super(key: key);
 
-class MusifyApplication extends StatefulWidget {
-  const MusifyApplication({Key? key}) : super(key: key);
-
-  @override
-  _MusifyApplicationState createState() => _MusifyApplicationState();
-}
-
-class _MusifyApplicationState extends State<MusifyApplication> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // final themeNotifier = Provider.of<ThemeNotifier>(context);
+
+    return GetMaterialApp(
       title: AppConstants.applicationTitle,
       debugShowCheckedModeBanner: false,
-      // localizationsDelegates: const [
-      //   // AppLocalizations.delegate, // Add this line
-      //
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // supportedLocales: const [
-      //   Locale('en', ''),
-      //   Locale('fa', ''),
-      // ],
-
-      // supportedLocales: AppLocalizations.supportedLocales,
-      // localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
-        primaryIconTheme: IconThemeData(color: Colors.black),
-        primaryTextTheme: TextTheme(headline6: TextStyle(color: Colors.black)),
+        primaryIconTheme: const IconThemeData(color: Colors.black),
+        primaryTextTheme: const TextTheme(headline6: TextStyle(color: Colors.black)),
         primaryColor: Colors.black,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
       ),
-      // initialRoute: '/splash',
-      // routes: {
-      //   '/': (context) => HomePage(),
-      //   '/splash': (context) => SplashPage(),
-      // },
-      home: const Musify(),
+      // theme: themeNotifier.getTheme(),
+      // home: _buildStack()
+      initialRoute: SPLASH_ROUTE,
+      // initialBinding: AppBinding(),
+      onGenerateRoute: router.generateRoute,
+      // getPages: routes,
     );
   }
 }

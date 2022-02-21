@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musify/app/helpers.dart';
-import 'package:musify/app/pages/home/home_page.dart';
+import 'package:musify/app/utils/helpers.dart';
 
 class BottomNavigationAppBar extends StatelessWidget {
   final PageController _pageController;
