@@ -1,38 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:musify/app/pages/home/home_page.dart';
-import 'package:musify/app/pages/musics/musics.dart';
-import 'package:musify/app/pages/playlists/playlists.dart';
-import 'package:musify/app/widgets/appbar/appbar_widget.dart';
-import 'package:musify/app/widgets/bottomappbar/bottom_navigation_app_bar2.dart';
-import 'package:musify/app/widgets/drawer/drawer_widget.dart';
+import 'package:musify/app/presentation/pages/player/player_page.dart';
+import 'package:musify/app/presentation/pages/playlists/playlists.dart';
+import 'package:musify/app/presentation/pages/musics/musics.dart';
+import 'package:musify/app/presentation/widgets/appbar/appbar_widget.dart';
+import 'package:musify/app/presentation/widgets/drawer/drawer_widget.dart';
 
-class Musify extends StatefulWidget {
-  const Musify({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  _MusifyState createState() => _MusifyState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MusifyState extends State<Musify> {
+class _HomePageState extends State<HomePage> {
   int _currentPageIndex = 0;
 
   void _onBottomNavigarionBartapped(int index) {
     setState(() {
-      this._currentPageIndex = index;
+      _currentPageIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     List<dynamic> pages = [
-      new HomePage(),
-      new PlayListsPage(),
-      new MusicsPage(),
+      const PlayerPage(),
+      const PlayListsPage(),
+      const MusicsPage(),
     ];
 
     return Scaffold(
       appBar: AppBarWidget(
-        title: Text(
+        title: const Text(
           "Musify",
           style: TextStyle(color: Colors.black),
         ),
@@ -45,9 +44,9 @@ class _MusifyState extends State<Musify> {
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: false,
         showSelectedLabels: false,
-        selectedIconTheme: IconThemeData(color: Colors.red),
+        selectedIconTheme: const IconThemeData(color: Colors.red),
         selectedItemColor: Colors.red,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: "",

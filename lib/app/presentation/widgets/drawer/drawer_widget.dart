@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:musify/app/helpers.dart';
-import 'package:musify/app/pages/settings/setting/setting_page.dart';
+import 'package:musify/app/utils/helpers.dart';
+
+import 'package:musify/app/presentation/pages/settings/setting/setting_page.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({Key? key, required BuildContext context}) : super(key: key);

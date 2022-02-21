@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musify/app/widgets/appbar/appbar_widget.dart';
+import 'package:musify/app/presentation/widgets/appbar/appbar_widget.dart';
 
 class WidgetSettingPage extends StatefulWidget {
   const WidgetSettingPage({Key? key}) : super(key: key);

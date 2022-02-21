@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:musify/app/helpers.dart';
+import 'package:musify/app/app_router.dart';
+import 'package:musify/app/utils/helpers.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -13,16 +14,15 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
 
   Timer simulateTimer() {
-    var _duration = Duration(seconds: 6);
+    var _duration = const Duration(seconds: 4);
     return Timer(_duration, () {
-      Helpers.navigateToPageRoute(context, '/');
+      Helpers.navigateToPageRoute(context, HOME_PAGE_ROUTE);
     });
   }
 
   @override
   void initState() {
     super.initState();
-
     simulateTimer();
   }
 
