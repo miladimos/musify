@@ -4,17 +4,17 @@ import 'package:musify/app/musify_application.dart';
 
 import 'app/app_router.dart';
 
-
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
-  runApp(EasyLocalization(
+  runApp(
+    EasyLocalization(
       path: 'assets/translations',
       supportedLocales: const [Locale('en', 'US'), Locale('fa', 'IR')],
       child: MusifyApplication(
         router: AppRouter(),
-      )
-  ));
+      ),
+    ),
+  );
 }
