@@ -12,6 +12,7 @@ void main() async {
     EasyLocalization(
       path: 'assets/translations',
       supportedLocales: const [Locale('en', 'US'), Locale('fa', 'IR')],
+      fallbackLocale: const Locale('fa', 'IR'),
       child: MusifyApplication(
         router: AppRouter(),
       ),

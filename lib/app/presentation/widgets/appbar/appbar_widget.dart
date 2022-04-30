@@ -8,6 +8,6 @@ class AppBarWidget extends AppBar {
           centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 1,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Colors.black),
         );
 }

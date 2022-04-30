@@ -4,7 +4,9 @@ import 'package:musify/app/utils/helpers.dart';
 class BottomNavigationAppBar extends StatelessWidget {
   final PageController _pageController;
 
-  BottomNavigationAppBar(this._pageController);
+  const BottomNavigationAppBar(this._pageController, {Key? key})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
@@ -24,23 +26,25 @@ class BottomNavigationAppBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   IconButton(
-                      icon: Icon(
-                        Icons.search,
-                        color: Colors.blueGrey[600],
-                      ),
-                      highlightColor: Colors.blue,
-                      onPressed: () {
-                        _pageController.jumpTo(0);
-                      }),
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.blueGrey[600],
+                    ),
+                    highlightColor: Colors.blue,
+                    onPressed: () {
+                      _pageController.jumpTo(0);
+                    },
+                  ),
                   IconButton(
-                      icon: Icon(
-                        Icons.queue_music,
-                        color: Colors.blueGrey[600],
-                      ),
-                      highlightColor: Colors.blue,
-                      onPressed: () {
-                        _pageController.jumpTo(1);
-                      }),
+                    icon: Icon(
+                      Icons.queue_music,
+                      color: Colors.blueGrey[600],
+                    ),
+                    highlightColor: Colors.blue,
+                    onPressed: () {
+                      _pageController.jumpTo(1);
+                    },
+                  ),
                 ],
               ),
             ),
@@ -50,17 +54,15 @@ class BottomNavigationAppBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    child: IconButton(
-                        icon: Icon(
-                          Icons.audiotrack_outlined,
-                          color: Colors.blueGrey[600],
-                        ),
-                        highlightColor: Colors.blue,
-                        onPressed: () {
-                          _pageController.jumpTo(2);
-                        }),
-                  ),
+                  IconButton(
+                      icon: Icon(
+                        Icons.audiotrack_outlined,
+                        color: Colors.blueGrey[600],
+                      ),
+                      highlightColor: Colors.blue,
+                      onPressed: () {
+                        _pageController.jumpTo(2);
+                      }),
                   IconButton(
                     icon: Icon(
                       Icons.settings,

@@ -14,7 +14,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
 
   Timer simulateTimer() {
-    var _duration = const Duration(seconds: 4);
+    var _duration = const Duration(seconds: 2);
     return Timer(_duration, () {
       Helpers.navigateToPageRoute(context, HOME_PAGE_ROUTE);
     });

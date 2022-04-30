@@ -11,7 +11,7 @@ class _MusicsPageState extends State<MusicsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Music"),
+      body: Text("Musics"),
     );
   }
 }
