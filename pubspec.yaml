@@ -14,18 +14,20 @@ dependencies:
     sdk: flutter
   intl:
 
-  easy_localization:
   just_audio:
   path_provider:
   logging:
   shared_preferences:
   url_launcher:
   get:
+  dio: 
   get_storage:
+  connectivity_plus:
   get_it:
   animations:
   permission_handler:
   #  audioplayers: ^0.20.1
+  device_preview: 
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -39,7 +41,6 @@ flutter:
 
 assets:
   - assets/
-  - assets/translations/
 
   # fonts:
   #   - family: Schyler
