@@ -29,6 +29,8 @@ dependencies:
   #  audioplayers: ^0.20.1
   device_preview: 
   cupertino_icons: ^1.0.2
+  audio_service: ^0.18.10
+  on_audio_query: ^2.9.0
 
 dev_dependencies:
   flutter_test:

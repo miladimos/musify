@@ -13,7 +13,7 @@ class GlobalErrorHandler with AppLogger {
     FlutterError.onError = _handleFlutterError;
 
     runZonedGuarded(() {
-      WidgetsFlutterBinding.ensureInitialized();
+      // WidgetsFlutterBinding.ensureInitialized();
 
       runApp(DevicePreview(
         enabled: !kReleaseMode,

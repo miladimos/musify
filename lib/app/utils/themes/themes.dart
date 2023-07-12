@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Themes {
-
   static final lightTheme = ThemeData(
-    colorScheme: const ColorScheme.light(),
+    useMaterial3: true,
+    colorSchemeSeed: Colors.green,
+    // colorScheme: const ColorScheme.light().copyWith(),
   );
 
   static final darkTheme = ThemeData(
-    colorScheme: const ColorScheme.dark(),
+    useMaterial3: true,
+    // colorScheme: const ColorScheme.dark(),
+    colorSchemeSeed: Colors.green,
   );
-
 }

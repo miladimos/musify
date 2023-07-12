@@ -18,7 +18,10 @@ class AppRoutes {
 
   static var routes = [
     GetPage(
-        name: _Paths.HOME, page: () => HomePage(), binding: HomePageBinding()),
+      name: _Paths.HOME,
+      page: () => HomePage(),
+      binding: HomePageBinding(),
+    ),
     GetPage(
         name: _Paths.SPLASH,
         page: () => SplashPage(),
