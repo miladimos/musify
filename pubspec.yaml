@@ -1,5 +1,8 @@
 name: musify
-description: A opensource, minimal and powerful audio player for android.
+description: A open source, minimal audio player.
+homepage: https://github.com/miladimos/musify
+repository: https://github.com/miladimos/musify
+issue_tracker: https://github.com/miladimos/musify/issues
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 0.1.0
 
@@ -13,8 +16,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl:
-
-  just_audio:
+  path: 
   path_provider:
   logging:
   shared_preferences:
@@ -23,14 +25,17 @@ dependencies:
   dio: 
   get_storage:
   connectivity_plus:
+  pull_to_refresh:
   get_it:
   animations:
   permission_handler:
+  quick_actions:
+  just_audio:
   #  audioplayers: ^0.20.1
-  device_preview: 
-  cupertino_icons: ^1.0.2
   audio_service: ^0.18.10
   on_audio_query: ^2.9.0
+  device_preview: 
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:

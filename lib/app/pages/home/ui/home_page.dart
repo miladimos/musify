@@ -1,3 +1,4 @@
+import 'package:musify/app/pages/play/ui/play_page.dart';
 import 'package:musify/app/utils/helpers.dart';
 import 'package:musify/app/utils/translations/translation_controller.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +21,10 @@ class HomePage extends GetView<HomePageController> {
             elevation: 4,
             shadowColor: Colors.black,
             actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
-            leading: const Icon(Icons.sort_rounded),
+            // leading: const Icon(Icons.sort_rounded),
           ),
-          body: FutureBuilder<List>(
+          drawer: Drawer(),
+          body: FutureBuilder<List<SongModel>>(
             future: controller.audioQuery.querySongs(
               ignoreCase: true,
               orderType: OrderType.ASC_OR_SMALLER,
@@ -56,7 +58,7 @@ class HomePage extends GetView<HomePageController> {
                               style: TextStyle(fontSize: 18),
                             ),
                             subtitle: Text(
-                              snapshot.data![index].artist,
+                              snapshot.data![index].displayName,
                               style: TextStyle(fontSize: 14),
                             ),
                             leading: QueryArtworkWidget(
@@ -73,6 +75,9 @@ class HomePage extends GetView<HomePageController> {
                                 ? const Icon(Icons.play_arrow)
                                 : null,
                             onTap: () {
+                              Get.to(
+                                () => PlayPage(data: snapshot.data![index]),
+                              );
                               // controller.playAudio(
                               //     snapshot.data![index].uri, index);
                             },
